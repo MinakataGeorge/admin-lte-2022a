@@ -103,6 +103,11 @@
             </div>
             <div class="info">
             <a href="#" class="d-block">Gigi Yan</a>
+            <a href="./login.php" class="d-block">
+              <span class="badge bg-warning">
+                <i class="fa fa-door-open mr-2"></i></i>Sing out
+              </span>  
+          </a>
             </div>
         </div>
 
