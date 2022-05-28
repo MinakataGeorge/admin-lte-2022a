@@ -55,7 +55,7 @@
                                           <a class="dropdown-item text-info" href="#"><i class="fas fa-info mr-3"></i> See</a>
                                           <a class="dropdown-item text-success" href="#"><i class="fas fa-edit mr-3"></i> Edit</a>
                                           <div class="dropdown-divider"></div>
-                                          <a class="dropdown-item text-danger" href="#"><i class="fas fa-trash mr-3"></i>Erase</a>
+                                          <button class="dropdown-item text-danger" onclick="remove('Jhon')"><i class="fas fa-trash mr-3"></i>Erase</button>
                                         </div>
                                       </div>
                                     </td>
@@ -78,7 +78,7 @@
                                           <a class="dropdown-item text-info" href="#"><i class="fas fa-info mr-3"></i> See</a>
                                           <a class="dropdown-item text-success" href="#"><i class="fas fa-edit mr-3"></i> Edit</a>
                                           <div class="dropdown-divider"></div>
-                                          <a class="dropdown-item text-danger" href="#"><i class="fas fa-trash mr-3"></i>Erase</a>
+                                          <button class="dropdown-item text-danger" onclick="remove('Juan')"><i class="fas fa-trash mr-3"></i>Erase</button>
                                         </div>
                                       </div>
                                     </td>
@@ -101,7 +101,7 @@
                                           <a class="dropdown-item text-info" href="#"><i class="fas fa-info mr-3"></i> See</a>
                                           <a class="dropdown-item text-success" href="#"><i class="fas fa-edit mr-3"></i> Edit</a>
                                           <div class="dropdown-divider"></div>
-                                          <a class="dropdown-item text-danger" href="#"><i class="fas fa-trash mr-3"></i>Erase</a>
+                                          <button class="dropdown-item text-danger" onclick="remove('Cron')"><i class="fas fa-trash mr-3"></i>Erase</button>
                                         </div>
                                       </div>
                                     </td>
@@ -124,7 +124,7 @@
                                           <a class="dropdown-item text-info" href="#"><i class="fas fa-info mr-3"></i> See</a>
                                           <a class="dropdown-item text-success" href="#"><i class="fas fa-edit mr-3"></i> Edit</a>
                                           <div class="dropdown-divider"></div>
-                                          <a class="dropdown-item text-danger" href="#"><i class="fas fa-trash mr-3"></i>Erase</a>
+                                          <button class="dropdown-item text-danger" onclick="remove('Ale')"><i class="fas fa-trash mr-3"></i>Erase</button>
                                         </div>
                                       </div>
                                     </td>
@@ -138,5 +138,31 @@
                 </div>
             </div>
         </section>
+
+<script>
+  
+  function remove(name) {
+    Swal.fire({
+  title: 'Are you sure to remove'+name+'?',
+  text: "You won't be able to revert this!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#d33',
+  cancelButtonColor: '#3085d6',
+  confirmButtonText: 'Yes, delete it!',
+  cancelButtonText: 'No, cancel it!'
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire(
+      'User erase!',
+      '',
+      'success'
+    )
+  }
+})
+}
+  
+</script>
+
 <?php include '../../layouts/footer.php' ?>
   
